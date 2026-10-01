@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUR Cruises | Nautical Universal Routes - دبي وأبوظبي</title>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #020914;
+            --primary-navy: #051329;
+            --secondary-navy: #0A2246;
+            --accent-blue: #00D2FF;
+            --gold-accent: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --card-bg: rgba(10, 34, 70, 0.7);
+            --border-glow: rgba(0, 210, 255, 0.25);
+            --whatsapp-green: #25D366;
+            --email-red: #EA4335;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* HEADER & NAVBAR */
+        header {
+            background: rgba(2, 9, 20, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 1.2rem 6%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 2.2rem;
+            color: var(--accent-blue);
+            filter: drop-shadow(0 0 8px var(--accent-blue));
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            font-size: 0.65rem;
+            color: var(--accent-blue);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-btn:hover {
+            background: var(--accent-blue);
+            color: var(--bg-dark);
+            box-shadow: 0 0 15px var(--accent-blue);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(180deg, rgba(2, 9, 20, 0.65) 0%, rgba(2, 9, 20, 0.98) 100%), 
+                        url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop') center/cover fixed no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 130px 20px 60px 20px;
+        }
+
+        .hero-badge {
+            background: rgba(0, 210, 255, 0.1);
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            color: var(--text-light);
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.25;
+        }
+
+        .hero h2 span {
+            color: var(--accent-blue);
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 900px;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+            line-height: 1.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-whatsapp-main {
+            background: var(--whatsapp-green);
+            color: #ffffff;
+            padding: 16px 38px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: 0.3s transform, 0.3s box-shadow;
+        }
+
+        .btn-whatsapp-main:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-email-main {
+            background: var(--email-red);
+            color: #ffffff;
+            padding: 16px 38px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(234, 67, 53, 0.3);
+            transition: 0.3s transform, 0.3s box-shadow;
+        }
+
+        .btn-email-main:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(234, 67, 53, 0.5);
+        }
+
+        /* STATS BAR */
+        .stats-section {
+            background: var(--primary-navy);
+            padding: 45px 6%;
+            border-y: 1px solid var(--border-glow);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.8rem;
+            color: var(--gold-accent);
+            font-weight: 900;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 90px 6%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h3 {
+            font-size: 2.5rem;
+            color: var(--text-light);
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h3 span {
+            color: var(--accent-blue);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            margin-top: 15px;
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin-x: auto;
+        }
+
+        /* VIP REWARDS PROMO BANNER */
+        .vip-banner {
+            background: linear-gradient(135deg, rgba(214, 175, 55, 0.12) 0%, rgba(5, 19, 41, 0.95) 100%);
+            border: 2px solid var(--gold-accent);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .vip-banner h4 {
+            font-size: 2.2rem;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .vip-banner p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 950px;
+            margin: 0 auto 30px auto;
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .reward-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: right;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        html[dir="ltr"] .reward-card {
+            text-align: left;
+        }
+
+        .reward-card:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-5px);
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .reward-card i {
+            font-size: 2rem;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        .reward-card h5 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .reward-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h4 {
+            font-size: 2rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--border-glow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* FLEET SECTION */
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .fleet-card {
+            background: var(--secondary-navy);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-glow);
+            transition: 0.4s transform, 0.4s box-shadow;
+        }
+
+        .fleet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 210, 255, 0.2);
+            border-color: var(--accent-blue);
+        }
+
+        .fleet-img-wrapper {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .fleet-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s transform;
+        }
+
+        .fleet-card:hover .fleet-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .capacity-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-blue);
+            color: var(--bg-dark);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.85rem;
+        }
+
+        html[dir="ltr"] .capacity-badge {
+            right: auto;
+            left: 15px;
+        }
+
+        .fleet-content {
+            padding: 30px;
+        }
+
+        .fleet-content h4 {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .fleet-content p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 20px;
+        }
+
+        .fleet-btn {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .fleet-btn:hover {
+            background: var(--accent-blue);
+            color: var(--bg-dark);
+        }
+
+        /* GALLERY SECTION */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 250px;
+            border: 1px solid var(--border-glow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s transform;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(2,9,20,0.9) 0%, transparent 100%);
+            padding: 20px;
+            color: var(--text-light);
+        }
+
+        .gallery-overlay h5 {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+        }
+
+        /* ROUTES SECTION */
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .route-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-glow);
+            text-align: right;
+        }
+
+        html[dir="ltr"] .route-card {
+            text-align: left;
+        }
+
+        .route-card h4 {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .route-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .route-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        html[dir="ltr"] .route-card ul li {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        .route-card ul li::before {
+            content: "⚓";
+            position: absolute;
+            right: 0;
+            color: var(--gold-accent);
+        }
+
+        html[dir="ltr"] .route-card ul li::before {
+            right: auto;
+            left: 0;
+        }
+
+        /* SERVICES SECTION */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 20px;
+            border: 1px solid var(--border-glow);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-6px);
+        }
+
+        .service-box i {
+            font-size: 2.8rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-box h4 {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .service-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* MODAL POPUP */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 9, 20, 0.88);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--secondary-navy);
+            border: 2px solid var(--accent-blue);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            color: var(--text-light);
+            text-align: right;
+        }
+
+        html[dir="ltr"] .modal-content {
+            text-align: left;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 2rem;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        html[dir="ltr"] .close-modal {
+            left: auto;
+            right: 20px;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-blue);
+        }
+
+        /* CONTACT & FOOTER */
+        .contact-section {
+            background: var(--primary-navy);
+            border-top: 1px solid var(--border-glow);
+            text-align: center;
+        }
+
+        footer {
+            background: #01050C;
+            padding: 35px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            line-height: 1.8;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .footer-rights {
+            color: #E2E8F0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 2.3rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-compass"></i>
+            <div class="logo-text">
+                <h1>NUR CRUISES</h1>
+                <span>Nautical Universal Routes</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+            <li><a href="#fleet" data-ar="أسطولنا" data-en="Fleet">أسطولنا</a></li>
+            <li><a href="#routes" data-ar="مسارات الإبحار" data-en="Routes">مسارات الإبحار</a></li>
+            <li><a href="#gallery" data-ar="معالم دبي" data-en="Landmarks">معالم دبي</a></li>
+            <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+            <li><a href="#rewards" data-ar="قسائم VIP" data-en="VIP Rewards">قسائم VIP</a></li>
+            <li><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+        </ul>
+        <button class="lang-btn" onclick="toggleLanguage()">
+            <i class="fa-solid fa-globe"></i> <span id="lang-label">English</span>
+        </button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-badge" data-ar="⚓ التجارب البحرية الأرقى في دبي وأبوظبي" data-en="⚓ Premier Luxury Marine Experiences in Dubai">⚓ التجارب البحرية الأرقى في دبي وأبوظبي</div>
+        <h2 data-ar="استكشف أفق دبي الساحر <span>من أعماق البحر</span>" data-en="Discover Dubai’s Skyline <span>From The Ocean</span>">استكشف أفق دبي الساحر <span>من أعماق البحر</span></h2>
+        <p data-ar="تقدم شركة NUR Cruises تجربة رحلات بحرية فاخرة ومصممة خصيصاً لك. أسطولنا يضم أحدث اليخوت الخاصة، المراكب الخشبية التراثية، يخوت الكتمران الحديثة، والقوارب العائلية السريعة. خيارات متكاملة تجمع بين الخصوصية التامة، الرفاهية المطلقة، وأفضل الأسعار المتاحة."
+           data-en="NUR Cruises provides tailor-made luxury marine charters. Our fleet spans private superyachts, traditional wooden dhows, modern catamarans, and speedboats combining ultimate privacy and competitive pricing.">
+           تقدم شركة NUR Cruises تجربة رحلات بحرية فاخرة ومصممة خصيصاً لك. أسطولنا يضم أحدث اليخوت الخاصة، المراكب الخشبية التراثية، يخوت الكتمران الحديثة، والقوارب العائلية السريعة. خيارات متكاملة تجمع بين الخصوصية التامة، الرفاهية المطلقة، وأفضل الأسعار المتاحة.
+        </p>
+        <div class="hero-btns">
+            <a href="https://wa.me/971569712753691" class="btn-whatsapp-main" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-ar="احجز رحلتك مباشرة عبر الواتساب" data-en="Direct WhatsApp: +971 56 971 2753 691">احجز رحلتك مباشرة عبر الواتساب</span>
+            </a>
+            <a href="mailto:nur.cruises@gmail.com?subject=طلب%20حجز%20رحلة%20بحرية" class="btn-email-main">
+                <i class="fa-solid fa-envelope"></i>
+                <span data-ar="الحجز عبر البريد الإلكتروني" data-en="Email Booking: nur.cruises@gmail.com">الحجز عبر البريد الإلكتروني</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-section">
+        <div class="stat-item">
+            <h4>2022</h4>
+            <p data-ar="سنة التأسيس في أبوظبي" data-en="Founded in Abu Dhabi">سنة التأسيس في أبوظبي</p>
+        </div>
+        <div class="stat-item">
+            <h4>500</h4>
+            <p data-ar="أقصى سعة للمركب الواحدة" data-en="Max Single Vessel Capacity">أقصى سعة للمركب الواحدة</p>
+        </div>
+        <div class="stat-item">
+            <h4>100%</h4>
+            <p data-ar="تغطية كافة معالم دبي" data-en="Dubai Landmarks Covered">تغطية كافة معالم دبي</p>
+        </div>
+        <div class="stat-item">
+            <h4>99.8%</h4>
+            <p data-ar="نسبة رضا كبار العملاء" data-en="VIP Client Satisfaction">نسبة رضا كبار العملاء</p>
+        </div>
+    </div>
+
+    <!-- VIP REWARDS BANNER -->
+    <section id="rewards" style="padding-bottom: 0;">
+        <div class="vip-banner">
+            <h4 data-ar="🎁 احجز معنا واحصل على فرصة الفوز بقسائم هدايا لتجارب دبي الملكية!" data-en="🎁 Book With Us & Win VIP Vouchers For Dubai’s Top Attractions!">🎁 احجز معنا واحصل على فرصة الفوز بقسائم هدايا لتجارب دبي الملكية!</h4>
+            <p data-ar="عند تأكيد حجزك مع NUR Cruises، ستدخل تلقائياً في السحب الدوري للحصول على قسائم هدايا مجانية وشاملة لتقضية أوقات لا تُنسى في أرقى وجهات دبي السياحية والفندقية:"
+               data-en="Upon confirming your reservation with NUR Cruises, you are automatically entered into our draw for complimentary luxury vouchers across Dubai:">
+               عند تأكيد حجزك مع NUR Cruises، ستدخل تلقائياً في السحب الدوري للحصول على قسائم هدايا مجانية وشاملة لتقضية أوقات لا تُنسى في أرقى وجهات دبي السياحية والفندقية:
+            </p>
+
+            <div class="rewards-grid">
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 1: إقامة فاخرة شاملة لـ 3 ليالي لشخصين في فندق Palazzo Versace أو Address Downtown دبي مع وجبة إفطار ملكية واستخدام كافة المرافق والصالونات التجميلية." data-modal-en="Voucher 1 Details: Luxury 3-night stay for two at Palazzo Versace or Address Downtown Dubai including royal breakfast and full spa & facility access." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-hotel"></i>
+                    <h5 data-ar="إقامة 3 ليالي فندقية" data-en="3-Night Luxury Stay">إقامة 3 ليالي فندقية</h5>
+                    <p data-ar="في Palazzo Versace أو Address Downtown" data-en="At Palazzo Versace or Address Downtown">في Palazzo Versace أو Address Downtown</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 2: رحلة طيران سياحية بالطائرة المروحية (Helicopter) لمدة 22 دقيقة تجوب فيها أجواء دبي فوق برج خليفة، برج العرب، ونخلة جميرا." data-modal-en="Voucher 2 Details: 22-minute helicopter sightseeing tour over Dubai skyline, Burj Khalifa, Burj Al Arab, and Palm Jumeirah." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-helicopter"></i>
+                    <h5 data-ar="جولة طائرة هليكوبتر" data-en="Helicopter Aerial Tour">جولة طائرة هليكوبتر</h5>
+                    <p data-ar="تحليق ساحر فوق أفق دبي وبرج العرب" data-en="Panoramic flyover above Dubai skyline">تحليق ساحر فوق أفق دبي وبرج العرب</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 3: تذاكر VIP خاصة للركوب في العجلة الدوارة الأكبر عالمياً (Ain Dubai) في عين دبي بدبي مارينا مع مقصورة خاصة ومشروبات ضيافة." data-modal-en="Voucher 3 Details: VIP pass for Ain Dubai, the world's largest observation wheel at Bluewaters, with private cabin and complimentary drinks." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-ferris-wheel"></i>
+                    <h5 data-ar="تذاكر عين دبي VIP" data-en="Ain Dubai VIP Pass">تذاكر عين دبي VIP</h5>
+                    <p data-ar="إطلالة بانورامية كاملة من جزيرة بلوواترز" data-en="Exclusive private cabin views at Bluewaters">إطلالة بانورامية كاملة من جزيرة بلوواترز</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 4: بطاقات دخول يومية كاملة لعائلة أو لشخصين للحديقة المائية الأشهر عالمياً Aquaventure في منتجع أتلانتس النخلة شاملة الألعاب والوجبات." data-modal-en="Voucher 4 Details: Full-day access passes for Atlantis Aquaventure Waterpark at Palm Jumeirah including rides and meal packages." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-water"></i>
+                    <h5 data-ar="حديقة أتلانتس المائية" data-en="Atlantis Aquaventure">حديقة أتلانتس المائية</h5>
+                    <p data-ar="تذاكر مغامرات أكوابارك أتلانتس النخلة" data-en="Full day waterpark access at Atlantis">تذاكر مغامرات أكوابارك أتلانتس النخلة</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 5: عشاء رومانسي أو عائلي فاخر بقيمة مجانية في مطعم CÉ LA VI الفاخر في داون تاون دبي المطل مباشرة على برج خليفة." data-modal-en="Voucher 5 Details: Complimentary fine dining voucher at CÉ LA VI Downtown Dubai featuring direct views of Burj Khalifa." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h5 data-ar="عشاء مطعم CÉ LA VI" data-en="CÉ LA VI Fine Dining">عشاء مطعم CÉ LA VI</h5>
+                    <p data-ar="تجربة طهي عالمية وإطلالة برج خليفة" data-en="Luxury culinary experience with Khalifa view">تجربة طهي عالمية وإطلالة برج خليفة</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 6: جولة بيئية خاصة ومستدامة برفقة مرشد خبير للتعرف على محمية رأس الخور ومشاهدة سرب طيور الفلامينغو الجميلة في قلب دبي." data-modal-en="Voucher 6 Details: Private guided eco-tour to Ras Al Khor Wildlife Sanctuary to observe flamingos in their natural habitat." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-feather"></i>
+                    <h5 data-ar="محمية رأس الخور" data-en="Ras Al Khor Sanctuary">محمية رأس الخور</h5>
+                    <p data-ar="زيارة استكشافية لمحمية الفلامينغو" data-en="Private guided tour for Flamingo nature">زيارة استكشافية لمحمية الفلامينغو</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h4 data-ar="قصة شغف بالبحر والريادة العالمية" data-en="Our Legacy of Marine Excellence">قصة شغف بالبحر والريادة العالمية</h4>
+                <p data-ar="تأسست شركة **NUR Cruises** (اختصاراً لـ **Nautical Universal Routes**) في عام 2022 في العاصمة أبوظبي بدولة الإمارات العربية المتحدة، بتأسيس ورؤية من **الآنسة لادا (Ms. Lada)** وبإشراف وإدارة تنفيذية احترافية من **المستر نور (Mr. Nour)**."
+                   data-en="Founded in 2022 in Abu Dhabi, UAE by Ms. Lada and managed by Mr. Nour, Nautical Universal Routes (NUR Cruises) sets benchmarks in high-end chartering.">
+                   تأسست شركة **NUR Cruises** (اختصاراً لـ **Nautical Universal Routes**) في عام 2022 في العاصمة أبوظبي بدولة الإمارات العربية المتحدة، بتأسيس ورؤية من **الآنسة لادا (Ms. Lada)** وبإشراف وإدارة تنفيذية احترافية من **المستر نور (Mr. Nour)**.
+                </p>
+                <p data-ar="نحن متخصصون في تنظيم وإدارة كافة الرحلات البحرية والأنشطة السياحية المائية داخل إمارة دبي وبشكل نخبوي في أبوظبي. نحن لا نوفر مجرد تأجير يخوت، بل نصمم ذكريات واستثناءات حقيقية تشمل الضيافة، إعداد المأكولات الفاخرة، الإضاءات، والتنظيم الاحترافي للأفراح والفعاليات."
+                   data-en="We specialize in managing sea trips in Dubai and Abu Dhabi, offering tailored experiences, culinary catering, decor, and full event coordination on water.">
+                   نحن متخصصون في تنظيم وإدارة كافة الرحلات البحرية والأنشطة السياحية المائية داخل إمارة دبي وبشكل نخبوي في أبوظبي. نحن لا نوفر مجرد تأجير يخوت، بل نصمم ذكريات واستثناءات حقيقية تشمل الضيافة، إعداد المأكولات الفاخرة، الإضاءات، والتنظيم الاحترافي للأفراح والفعاليات.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1000&auto=format&fit=crop" alt="Luxury Superyacht Experience in Dubai">
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET SECTION -->
+    <section id="fleet">
+        <div class="section-header">
+            <h3 data-ar="أسطولنا <span>البحري الفاخر</span>" data-en="Our Luxury <span>Marine Fleet</span>">أسطولنا <span>البحري الفاخر</span></h3>
+            <p data-ar="تصفح يخوتنا وسفننا المصممة بدقة لتلبي أعلى معايير الرفاهية والأمان" data-en="Explore our vessels meticulously designed for ultimate luxury and safety">تصفح يخوتنا وسفننا المصممة بدقة لتلبي أعلى معايير الرفاهية والأمان</p>
+        </div>
+
+        <div class="fleet-grid">
+            <!-- YACHTS -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="capacity-badge" data-ar="2 - 34 شخص" data-en="2 - 34 Guests">2 - 34 شخص</span>
+                    <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1000&auto=format&fit=crop" alt="Private Luxury Yacht">
+                </div>
+                <div class="fleet-content">
+                    <h4 data-ar="اليخوت الفاخرة الخاصة (VIP)" data-en="VIP Private Superyachts">اليخوت الفاخرة الخاصة (VIP)</h4>
+                    <p data-ar="يخوت خاصة أنيقة تتراوح بين 44 قدم إلى 90 قدم، مجهزة بغرف نوم مكيفة، صالونات راقية، طاقم ضيافة متميز، وأنظمة دي جي وموسيقى." data-en="Sleek private yachts from 44ft to 90ft equipped with air-conditioned cabins, luxury lounges, and dedicated crew.">يخوت خاصة أنيقة تتراوح بين 44 قدم إلى 90 قدم، مجهزة بغرف نوم مكيفة، صالونات راقية، طاقم ضيافة متميز، وأنظمة دي جي وموسيقى.</p>
+                    <button class="fleet-btn" 
+                            data-modal-ar="🔹 تفاصيل اليخوت الفاخرة الخاصة:\n\n• السعة: من 2 حتى 34 شخصاً حسب طول اليخت.\n• التجهيزات: غرف نوم بأسلوب VIP، حمامات خاصة، مطبخ كامل، جلسات تشميس خارجية، صالون داخلي فخم.\n• الخدمة المشمولة: كابتن مرخص + طاقم ضيافة، مشروبات باردة ومياه مجانية، نظام صوتي عبر بولوثوث.\n• الخدمات الإضافية: إمكانية إضافة عشاء مشاوي، كيك أعياد ميلاد، وتزيين بالبالونات." 
+                            data-modal-en="🔹 VIP Private Superyachts Details:\n\n• Capacity: 2 to 34 guests based on yacht size.\n• Amenities: VIP bedrooms, private bathrooms, fully equipped kitchen, outdoor sun decks, luxury salon.\n• Included Services: Licensed captain & crew, complimentary chilled beverages, Bluetooth sound system.\n• Optional Add-ons: Live BBQ catering, custom birthday cakes, and balloon decorations." 
+                            onclick="openModalFromElem(this)">
+                        <i class="fa-solid fa-circle-info"></i> <span data-ar="عرض الشرح والتفاصيل الكاملة" data-en="View Full Yacht Details">عرض الشرح والتفاصيل الكاملة</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CATAMARANS -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="capacity-badge" data-ar="20 - 150 شخص" data-en="20 - 150 Guests">20 - 150 شخص</span>
+                    <img src="https://boatanza.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-05-at-3.58.51-PM-3.jpeg" alt="Modern Ocean Catamaran">
+                </div>
+                <div class="fleet-content">
+                    <h4 data-ar="يخوت الكتمران الحديثة" data-en="Modern Mega Catamarans">يخوت الكتمران الحديثة</h4>
+                    <p data-ar="تصاميم عريضة ومزدوجة توفر ثباتاً فائقاً بالمياه ومساحات واسعة مفتوحة تناسب الحفلات الضخمة والتجمعات الكبيرة." data-en="Dual-hull wide designs ensuring ultra-stability on water with spacious outdoor decks for large parties.">تصاميم عريضة ومزدوجة توفر ثباتاً فائقاً بالمياه ومساحات واسعة مفتوحة تناسب الحفلات الضخمة والتجمعات الكبيرة.</p>
+                    <button class="fleet-btn" 
+                            data-modal-ar="🔹 تفاصيل يخوت الكتمران:\n\n• السعة: تتسع للمجموعات من 20 إلى 150 شخصاً.\n• الميزات: عدم وجود اهتزاز بحري (مثالي لمن يعانون من دوار البحر)، شبكات استرخاء فوق الماء، مسرح دي جي مفتوح.\n• الأنشطة: إمكانية التوقف للسباحة، إقامة بوفيه عشاء، وتصوير فيديو درون احترافي.\n• خيارات الحجز: حجز خاص بالكامل أو رحلات مجدولة." 
+                            data-modal-en="🔹 Modern Mega Catamarans Details:\n\n• Capacity: Accommodates groups from 20 to 150 guests.\n• Features: High stability at sea (ideal for sea sickness), overwater net lounges, open DJ stage.\n• Activities: Swimming stops, buffet dinner service, and professional drone video coverage.\n• Booking Options: Full private charter or scheduled cruises." 
+                            onclick="openModalFromElem(this)">
+                        <i class="fa-solid fa-circle-info"></i> <span data-ar="عرض الشرح والتفاصيل الكاملة" data-en="View Full Catamaran Details">عرض الشرح والتفاصيل الكاملة</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- DHOW SHIPS -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="capacity-badge" data-ar="20 - 500 شخص" data-en="20 - 500 Guests">20 - 500 شخص</span>
+                    <img src="https://whitesky.travel/wp-content/uploads/2025/07/dhow-cruise-in-marina-dubai-pay-with-tabby-or-tamara.webp" alt="Traditional Wooden Dhow Ship">
+                </div>
+                <div class="fleet-content">
+                    <h4 data-ar="السفن والمراكب الخشبية التراثية" data-en="Traditional Wooden Dhow Ships">السفن والمراكب الخشبية التراثية</h4>
+                    <p data-ar="سفن تراثية خشبية عائمة ومكيفة تتكون من طابقين، وتعتبر الخيار الأفضل لعشاء الشركات والمجموعات الكبيرة." data-en="Two-deck traditional wooden vessels offering floating dinner tours with international buffets.">سفن تراثية خشبية عائمة ومكيفة تتكون من طابقين، وتعتبر الخيار الأفضل لعشاء الشركات والمجموعات الكبيرة.</p>
+                    <button class="fleet-btn" 
+                            data-modal-ar="🔹 تفاصيل المراكب والسفن الخشبية:\n\n• السعة: تبدأ من 20 شخص وتصل في السفن الكبرى حتى 500 شخص كحد أقصى.\n• البرنامج: جولة بحرية لمدة ساعتين في مارينا أو خور دبي، بوفيه عشاء عالمي 5 نجوم (مشاوي، مأكولات شرقية وغربية)، عصائر ومشروبات خفيفة.\n• العروض الترفيهية: عروض تنورة حية وموسيقى هادئة." 
+                            data-modal-en="🔹 Traditional Wooden Dhow Ships Details:\n\n• Capacity: From 20 guests up to 500 maximum capacity on mega dhows.\n• Program: 2-hour cruise along Dubai Marina or Creek, 5-star international buffet (BBQ, oriental & international dishes), juices & soft drinks.\n• Live Entertainment: Live Tanoura dance performance & ambient music." 
+                            onclick="openModalFromElem(this)">
+                        <i class="fa-solid fa-circle-info"></i> <span data-ar="عرض الشرح والتفاصيل الكاملة" data-en="View Dhow Ship Details">عرض الشرح والتفاصيل الكاملة</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- SPEEDBOATS -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="capacity-badge" data-ar="4 - 10 أشخاص" data-en="4 - 10 Guests">4 - 10 أشخاص</span>
+                    <img src="https://images.unsplash.com/photo-1520255870062-bd79d3865de7?q=80&w=1000&auto=format&fit=crop" alt="Family Tour Speedboat">
+                </div>
+                <div class="fleet-content">
+                    <h4 data-ar="القوارب العائلية السريعة" data-en="Family Tour Speedboats">القوارب العائلية السريعة</h4>
+                    <p data-ar="قوارب حديثة وسريعة مخصصة للعائلات المحدودة أو الأصدقاء لجولات استكشافية خاطفة وتصوير المعالم." data-en="Agile speedboats tailored for small families wanting high-speed sightseeing tours around coastline attractions.">قوارب حديثة وسريعة مخصصة للعائلات المحدودة أو الأصدقاء لجولات استكشافية خاطفة وتصوير المعالم.</p>
+                    <button class="fleet-btn" 
+                            data-modal-ar="🔹 تفاصيل القوارب العائلية:\n\n• السعة: من 4 حتى 10 أشخاص.\n• المزايا: السرعة، المرونة في الاقتراب من برج العرب وأتلانتس لالتقاط أفضل الصور.\n• السلامة: ستر نجاة لجميع الأعمار، قبطان خبير بإرشادات الأمان.\n• المدة: متوفرة لمدة 60 دقيقة، 90 دقيقة، أو ساعتين." 
+                            data-modal-en="🔹 Family Tour Speedboats Details:\n\n• Capacity: 4 to 10 guests.\n• Advantages: High speed and flexibility to get close to Burj Al Arab & Atlantis for iconic photos.\n• Safety: Life jackets provided for all ages, expert safety-certified captain.\n• Duration: Available for 60 mins, 90 mins, or 2 hours." 
+                            onclick="openModalFromElem(this)">
+                        <i class="fa-solid fa-circle-info"></i> <span data-ar="عرض الشرح والتفاصيل الكاملة" data-en="View Speedboat Details">عرض الشرح والتفاصيل الكاملة</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROUTES SECTION -->
+    <section id="routes" style="background:var(--primary-navy);">
+        <div class="section-header">
+            <h3 data-ar="مسارات <span>الإبحار المتاحة</span>" data-en="Cruising <span>Routes</span>">مسارات <span>الإبحار المتاحة</span></h3>
+            <p data-ar="نأخذك في جولات بحرية تشمل أشهر وأرقى المعالم المعمارية والسياحية في إمارة دبي" data-en="Cruising along Dubai’s most prestigious architectural and coastal landmarks">نأخذك في جولات بحرية تشمل أشهر وأرقى المعالم المعمارية والسياحية في إمارة دبي</p>
+        </div>
+
+        <div class="routes-grid">
+            <div class="route-card">
+                <h4 data-ar="🚢 مسار دبي مارينا وبلوواترز" data-en="🚢 Dubai Marina & Bluewaters">🚢 مسار دبي مارينا وبلوواترز</h4>
+                <ul>
+                    <li data-ar="الانطلاق من أرصفة دبي مارينا الشهيرة" data-en="Departure from Dubai Marina dock">الانطلاق من أرصفة دبي مارينا الشهيرة</li>
+                    <li data-ar="المرور بكتلة الأبراج الشاهقة وإضاءات مارينا" data-en="Cruising past Marina skyscrapers">المرور بكتلة الأبراج الشاهقة وإضاءات مارينا</li>
+                    <li data-ar="التوقف أمام عجلة عين دبي (Ain Dubai) للتصوير" data-en="Photo stop at Ain Dubai">التوقف أمام عجلة عين دبي (Ain Dubai) للتصوير</li>
+                    <li data-ar="الإبحار بالقرب من شاطئ JBR" data-en="Sailing past JBR Beach">الإبحار بالقرب من شاطئ JBR</li>
+                </ul>
+            </div>
+
+            <div class="route-card">
+                <h4 data-ar="🏰 مسار النخلة وبرج العرب" data-en="🏰 Palm Jumeirah & Burj Al Arab">🏰 مسار النخلة وبرج العرب</h4>
+                <ul>
+                    <li data-ar="جولة حول مجسم جزيرة نخلة جميرا" data-en="Cruising around Palm Jumeirah">جولة حول مجسم جزيرة نخلة جميرا</li>
+                    <li data-ar="التقاط صور خلفية لمنتجع أتلانتس النخلة" data-en="Photoshoot at Atlantis The Palm">التقاط صور خلفية لمنتجع أتلانتس النخلة</li>
+                    <li data-ar="الوقوف أمام فندق برج العرب 7 نجوم" data-en="Anchor near Burj Al Arab">الوقوف أمام فندق برج العرب 7 نجوم</li>
+                    <li data-ar="فرصة للسباحة والاسترخاء في مياه جميرا الهادئة" data-en="Swimming stop in clear waters">فرصة للسباحة والاسترخاء في مياه جميرا الهادئة</li>
+                </ul>
+            </div>
+
+            <div class="route-card">
+                <h4 data-ar="🏙️ مسار القناة المائية وداون تاون" data-en="🏙️ Water Canal & Downtown">🏙️ مسار القناة المائية وداون تاون</h4>
+                <ul>
+                    <li data-ar="عبور القناة المائية وشلالات دبي المضاءة" data-en="Sailing through Dubai Water Canal">عبور القناة المائية وشلالات دبي المضاءة</li>
+                    <li data-ar="إطلالة على أفق برج خليفة ووسط المدينة" data-en="Views of Burj Khalifa skyline">إطلالة على أفق برج خليفة ووسط المدينة</li>
+                    <li data-ar="المرور تحت جسور القناة المعمارية الحديثة" data-en="Passing modern architectural bridges">المرور تحت جسور القناة المعمارية الحديثة</li>
+                    <li data-ar="تجربة إبحار هادئة ومثالية للرحلات الرومانسية" data-en="Serene cruising ideal for couples">تجربة إبحار هادئة ومثالية للرحلات الرومانسية</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- LANDMARKS GALLERY -->
+    <section id="gallery">
+        <div class="section-header">
+            <h3 data-ar="معالم دبي <span>من على متن يخوتنا</span>" data-en="Dubai Landmarks <span>From Our Yachts</span>">معالم دبي <span>من على متن يخوتنا</span></h3>
+            <p data-ar="شاهد المناظر الاستثنائية التي ستراها وتلتقط الصور معها خلال رحلتك معنا" data-en="Breathtaking sights you will encounter and photograph during your voyage">شاهد المناظر الاستثنائية التي ستراها وتلتقط الصور معها خلال رحلتك معنا</p>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- 1. برج خليفة -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" alt="Burj Khalifa Dubai">
+                <div class="gallery-overlay">
+                    <h5 data-ar="برج خليفة وداون تاون" data-en="Burj Khalifa & Downtown">برج خليفة وداون تاون</h5>
+                </div>
+            </div>
+
+            <!-- 2. برج العرب -->
+            <div class="gallery-item">
+                <img src="https://mmo.aiircdn.com/265/69df780da52be.jpg" alt="Burj Al Arab">
+                <div class="gallery-overlay">
+                    <h5 data-ar="برج العرب" data-en="Burj Al Arab">برج العرب</h5>
+                </div>
+            </div>
+
+            <!-- 3. أتلانتس النخلة -->
+            <div class="gallery-item">
+                <img src="https://dam.kerzner.com/i/kerzner/ATP_Resort-jpg" alt="Atlantis The Palm">
+                <div class="gallery-overlay">
+                    <h5 data-ar="أتلانتس النخلة" data-en="Atlantis The Palm">أتلانتس النخلة</h5>
+                </div>
+            </div>
+
+            <!-- 4. عين دبي جزيرة بلوواترز -->
+            <div class="gallery-item">
+                <img src="https://www.aindubai.com/sites/default/files/2024-12/LED%20Display.webp" alt="Ain Dubai & Bluewaters">
+                <div class="gallery-overlay">
+                    <h5 data-ar="عين دبي جزيرة بلوواترز" data-en="Ain Dubai & Bluewaters">عين دبي جزيرة بلوواترز</h5>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <div class="section-header">
+            <h3 data-ar="خدماتنا <span>التنظيمية والترفيهية</span>" data-en="Our <span>Catering & Event Services</span>">خدماتنا <span>التنظيمية والترفيهية</span></h3>
+            <p data-ar="نوفر لك كافة المتطلبات لتصبح رحلتك البحرية احتفالاً كاملاً متكاملاً" data-en="Providing everything required to make your trip an unforgettable celebration">نوفر لك كافة المتطلبات لتصبح رحلتك البحرية احتفالاً كاملاً متكاملاً</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <i class="fa-solid fa-cake-candles"></i>
+                <h4 data-ar="أعياد الميلاد والمناسبات الخاصة" data-en="Birthdays & Celebrations">أعياد الميلاد والمناسبات الخاصة</h4>
+                <p data-ar="تزيين كامل بالبالونات، تأمين كيك ميلاد مخصص، تشغيل أنظمة الإضاءة والموسيقى، وتوفير مصور احترافي." data-en="Full balloon decor, custom birthday cakes, sound systems, and dedicated photography.">تزيين كامل بالبالونات، تأمين كيك ميلاد مخصص، تشغيل أنظمة الإضاءة والموسيقى، وتوفير مصور احترافي.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-ring"></i>
+                <h4 data-ar="حفلات الزفاف والخطوبة" data-en="Weddings & Proposals">حفلات الزفاف والخطوبة</h4>
+                <p data-ar="تنسيق راقٍ لطلبات الزواج المفاجئة وحفلات الزفاف على سطح اليخوت والكتمران مع سجادة حمراء وضيافة ملكية." data-en="Elegant proposal set-ups and wedding receptions with red carpet and gourmet catering.">تنسيق راقٍ لطلبات الزواج المفاجئة وحفلات الزفاف على سطح اليخوت والكتمران مع سجادة حمراء وضيافة ملكية.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-utensils"></i>
+                <h4 data-ar="بوفيهات العشاء والباربكيو Live" data-en="Gourmet Catering & BBQ">بوفيهات العشاء والباربكيو Live</h4>
+                <p data-ar="طهاة متمرسون لإعداد المشاوي الطازجة مباشرة على متن اليخت أو تقديم بوفيهات عشاء مفتوحة متنوعة." data-en="Live BBQ chefs onboard preparing fresh grills or serving luxury international buffets.">طهاة متمرسون لإعداد المشاوي الطازجة مباشرة على متن اليخت أو تقديم بوفيهات عشاء مفتوحة متنوعة.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-water"></i>
+                <h4 data-ar="الألعاب المائية والJet Ski" data-en="Water Sports & Jet Skis">الألعاب المائية والJet Ski</h4>
+                <p data-ar="إضافة دراجات جت سكي سريعة، دلاعة مائية، أو تجربة Flyboard للتسلية والتشويق أثناء توقف اليخت." data-en="Add jet skis, water slides, or flyboards for thrilling water activities during anchors.">إضافة دراجات جت سكي سريعة، دلاعة مائية، أو تجربة Flyboard للتسلية والتشويق أثناء توقف اليخت.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h3 data-ar="احجز رحلتك <span>الآن واستفد من العروض</span>" data-en="Book Your <span>Cruise Today</span>">احجز رحلتك <span>الآن واستفد من العروض</span></h3>
+            <p data-ar="فريقنا متواجد على مدار 24 ساعة لمساعدتك في اختيار اليخت المناسب وتنسيق كافة تفاصيل رحلتك" data-en="Our team is available 24/7 to assist you in selecting the ideal yacht and coordinating every detail">فريقنا متواجد على مدار 24 ساعة لمساعدتك في اختيار اليخت المناسب وتنسيق كافة تفاصيل رحلتك</p>
+        </div>
+
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+            <a href="https://wa.me/971569712753691" class="btn-whatsapp-main" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> 
+                <span data-ar="الواتساب المباشر: +971 56 971 2753 691" data-en="Direct WhatsApp: +971 56 971 2753 691">الواتساب المباشر: +971 56 971 2753 691</span>
+            </a>
+            <a href="tel:0554406511" class="btn-whatsapp-main" style="background:var(--secondary-navy); border:1px solid var(--accent-blue);">
+                <i class="fa-solid fa-phone"></i> 
+                <span data-ar="الاتصال المباشر: 055 440 6511" data-en="Direct Call: 055 440 6511">الاتصال المباشر: 055 440 6511</span>
+            </a>
+            <a href="mailto:nur.cruises@gmail.com?subject=طلب%20حجز%20رحلة%20بحرية" class="btn-email-main">
+                <i class="fa-solid fa-envelope"></i> 
+                <span data-ar="البريد الإلكتروني: nur.cruises@gmail.com" data-en="Direct Email: nur.cruises@gmail.com">البريد الإلكتروني: nur.cruises@gmail.com</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- MODAL POPUP DIALOG -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h4 style="color:var(--accent-blue); margin-bottom:15px; font-size:1.5rem;" data-ar="تفاصيل الخيار والمعلومات الشاملة" data-en="Option Details & Comprehensive Info">تفاصيل الخيار والمعلومات الشاملة</h4>
+            <div id="modalText" style="line-height:1.9; white-space: pre-wrap; font-size:1.05rem; color:#cbd5e1;"></div>
+            <a href="https://wa.me/971569712753691" class="btn-whatsapp-main" style="margin-top:25px; text-align:center; display:inline-flex;" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> <span data-ar="تأكيد الحجز والاستفسار عبر الواتساب" data-en="Confirm Booking via WhatsApp">تأكيد الحجز والاستفسار عبر الواتساب</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-rights">NUR CRUISES All Rights Reserved &copy; 2026 for NUR CRUISES</p>
+        <p>(Nautical Universal Routes)</p>
+        <p>Established in 2022 in Abu Dhabi | Managed by Mr. Nour & Founded by Miss Lada</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let currentLang = 'ar';
+        let currentActiveElem = null;
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            document.getElementById('lang-label').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+
+            const elements = document.querySelectorAll('[data-ar]');
+            elements.forEach(el => {
+                el.innerHTML = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+            });
+
+            // إذا كان المودال مفتوحاً أثناء تغيير اللغة، يتم تحديث النص داخل النافذة تلقائياً
+            if (currentActiveElem && document.getElementById('infoModal').style.display === 'flex') {
+                const text = currentLang === 'en' 
+                    ? currentActiveElem.getAttribute('data-modal-en') 
+                    : currentActiveElem.getAttribute('data-modal-ar');
+                document.getElementById('modalText').innerText = text;
+            }
+        }
+
+        function openModalFromElem(elem) {
+            currentActiveElem = elem;
+            const text = currentLang === 'en' 
+                ? elem.getAttribute('data-modal-en') 
+                : elem.getAttribute('data-modal-ar');
+            
+            document.getElementById('modalText').innerText = text;
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+            currentActiveElem = null;
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById('infoModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
